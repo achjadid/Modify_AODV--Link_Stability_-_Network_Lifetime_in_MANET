@@ -150,8 +150,10 @@ AODV::AODV(nsaddr_t id) : Agent(PT_AODV),
   logtarget = 0;
   ifqueue = 0;
 
-//3 lines added by newones
+//4 lines added for TK
 energy_t=0.0;
+xpos=ypos=zpos=0.0;
+n_speed=0;
 fp=fopen("runtime.dat","w");
 
 }
@@ -1007,11 +1009,16 @@ AODV::forward(aodv_rt_entry *rt, Packet *p, double delay) {
 struct hdr_cmn *ch = HDR_CMN(p);
 struct hdr_ip *ih = HDR_IP(p);
 
-//below lines added newones
+//below lines added for TK
+t_node=(MobileNode*)(Node::get_node_by_address(index));
+((MobileNode*) t_node)->getLoc(&xpos,&ypos,&zpos);
+
 t_node=(MobileNode*)(Node::get_node_by_address(index));
 energy_t=t_node->energy_model()->energy();
-fprintf(fp,"%d, Energy: %f\n",index, energy_t);
-//end newones
+n_speed=((MobileNode*)t_node)->speed();
+
+fprintf(fp,"%d, Posistion: %f %f %f | Energy: %f | Speed: %d \n",index,xpos,ypos,zpos,energy_t,n_speed);
+//end
 
  if(ih->ttl_ == 0) {
 

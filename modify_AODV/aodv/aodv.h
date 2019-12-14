@@ -213,8 +213,9 @@ class AODV: public Agent {
         int             command(int, const char *const *);
         int             initialized() { return 1 && target_; }
 	
-	//four lines added newones
-	double energy_t;
+	//4 lines added for TK
+	double energy_t,xpos,ypos,zpos;
+	int n_speed;
 	MobileNode *t_node;
 	FILE *fp;
 
