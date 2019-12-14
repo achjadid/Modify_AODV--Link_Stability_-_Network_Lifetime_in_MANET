@@ -1,4 +1,4 @@
-# Modify_AODV--Link_Stability_-_Network_Lifetime_in_MANET
+# Modify AODV Link Stability and Network Lifetime in MANET
 
 ## TOPIK KHUSUS B
 
