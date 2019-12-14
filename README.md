@@ -40,5 +40,22 @@ Fokus utama pada paper ini adalah menunjukan bagaimana meningkatkan proses Route
 
 Dalam modifikasi AODV ini, ketika ada data untuk ditransmisikan, source node akan melakukan broadcast RREQ (Route Request), node yang berada disekitarnya akan memutuskan apakah meneruskan RREQ tersebut berdasarkan baterai yang tersisa dan link expiration time dari pengirim RREQ.
 
+![form-entry](https://raw.githubusercontent.com/jadidampme/Modify_AODV--Link_Stability_-_Network_Lifetime_in_MANET/master/pictures/Screenshot_1.png)
 
-##
+![form-entry](https://raw.githubusercontent.com/jadidampme/Modify_AODV--Link_Stability_-_Network_Lifetime_in_MANET/master/pictures/Screenshot_2.png)
+
+
+## Hasil
+![form-entry](https://raw.githubusercontent.com/jadidampme/Modify_AODV--Link_Stability_-_Network_Lifetime_in_MANET/master/pictures/Screenshot_3.png)
+Overhead vs Speed. (Link Life Time = 2)
+
+![form-entry](https://raw.githubusercontent.com/jadidampme/Modify_AODV--Link_Stability_-_Network_Lifetime_in_MANET/master/pictures/Screenshot_4.png)
+Delivery Ratio vs Speed. (Link Life Time = 2)
+
+![form-entry](https://raw.githubusercontent.com/jadidampme/Modify_AODV--Link_Stability_-_Network_Lifetime_in_MANET/master/pictures/Screenshot_5.png)
+Network Lifetime vs Speed. (Link Life Time = 2)
+
+![form-entry](https://raw.githubusercontent.com/jadidampme/Modify_AODV--Link_Stability_-_Network_Lifetime_in_MANET/master/pictures/Screenshot_5.png)
+End-to-End Delay vs Speed. (Link Life Time = 2)
+
+Modified AODV ini mempertimbangkan stabilitas jaringan dari semua aspek. Lifetime jaringan dapat berkurang karena dua hal. Pertama, node yang bergerak keluar dari jangkauan dapat menyebabkan link breakage. Kedua, node dapat kehabisan energinya yang mengarah ke network partitioning. Metrik yang digunakan dalam teknik yang diusulkan mengukur stabilitas jaringan berdasarkan kedua faktor ini.
